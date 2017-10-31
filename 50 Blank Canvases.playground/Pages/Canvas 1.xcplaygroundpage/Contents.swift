@@ -27,7 +27,7 @@ let canvas = Canvas(width: 1000, height: 1000)
 
 for x in stride(from: 0, through: 1000, by: 100) {
     if x % 200==0 {
-        canvas.fillColor = Color.blue
+        canvas.fillColor = Color.init(hue: 10, saturation: 100, brightness: 100, alpha: 100)
         
     }else{
         canvas.fillColor = Color.yellow
@@ -40,10 +40,10 @@ for x in stride(from: 0, through: 1000, by: 100) {
 
 for x in stride(from: 0, through: 1000, by: 100) {
     if x % 200==0 {
-        canvas.fillColor = Color.yellow
+        canvas.fillColor = Color.init(hue: 40, saturation: 100, brightness: 100, alpha: 100)
         
     }else{
-        canvas.fillColor = Color.blue
+        canvas.fillColor = Color.init(hue: 20, saturation: 100, brightness: 100, alpha: 100)
     }
     
     canvas.drawEllipse(centreX: x, centreY: 1000, width: 500, height: 500)
