@@ -22,12 +22,25 @@ let canvas = Canvas(width: 600, height: 600)
  
  Use whitespace and comments as appropriate.
  */
-// Outline telettubies face
 canvas.translate(byX: 300, byY: 300)
-canvas.drawAxes()
+//draw background
+canvas.fillColor = Color.red
+canvas.drawRectangle(centreX: 0, centreY: 0, width: 600, height: 600)
+// Outline telettubies face
 canvas.drawShapesWithFill = false
-canvas.defaultBorderWidth = 30
-canvas.drawEllipse(centreX: 0, centreY: 0, width: 300, height: 300)
+canvas.defaultBorderWidth = 20
+canvas.drawEllipse(centreX: 0, centreY: 0, width: 350, height: 350)
+//draw inner face
+canvas.fillColor = Color.white
+canvas.drawShapesWithFill = true
+canvas.drawEllipse(centreX: 0, centreY: 0, width: 340, height: 340)
+// draw the eyes
+canvas.drawAxes()
+canvas.drawShapesWithFill = true
+canvas.fillColor = Color.black
+canvas.drawShapesWithBorders = false
+canvas.drawEllipse(centreX: 80, centreY: 60, width: 70, height: 70)
+canvas.drawEllipse(centreX: -80, centreY: 60, width: 70, height: 70)
 
 
 
