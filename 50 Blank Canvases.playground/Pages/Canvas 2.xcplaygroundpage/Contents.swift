@@ -13,7 +13,7 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 600, height: 600)
 
 /*:
  ## Add your code below
@@ -23,7 +23,11 @@ let canvas = Canvas(width: 400, height: 300)
  Use whitespace and comments as appropriate.
  */
 // Outline telettubies face
-
+canvas.translate(byX: 300, byY: 300)
+canvas.drawAxes()
+canvas.drawShapesWithFill = false
+canvas.defaultBorderWidth = 30
+canvas.drawEllipse(centreX: 0, centreY: 0, width: 300, height: 300)
 
 
 
