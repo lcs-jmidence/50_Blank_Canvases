@@ -27,21 +27,44 @@ canvas.translate(byX: 300, byY: 300)
 canvas.fillColor = Color.red
 canvas.drawRectangle(centreX: 0, centreY: 0, width: 600, height: 600)
 // Outline telettubies face
-canvas.drawShapesWithFill = false
-canvas.defaultBorderWidth = 20
-canvas.drawEllipse(centreX: 0, centreY: 0, width: 350, height: 350)
+
 //draw inner face
-canvas.fillColor = Color.white
+canvas.fillColor = Color.init(hue: 55, saturation: 4, brightness: 65, alpha: 100)
 canvas.drawShapesWithFill = true
 canvas.drawEllipse(centreX: 0, centreY: 0, width: 340, height: 340)
 // draw the eyes
-canvas.drawAxes()
 canvas.drawShapesWithFill = true
 canvas.fillColor = Color.black
 canvas.drawShapesWithBorders = false
 canvas.drawEllipse(centreX: 80, centreY: 60, width: 70, height: 70)
 canvas.drawEllipse(centreX: -80, centreY: 60, width: 70, height: 70)
 
+//draw blood from blood
+canvas.drawShapesWithFill = true
+canvas.drawShapesWithBorders = false
+canvas.fillColor = Color.red
+canvas.drawRectangle(centreX: 20, centreY: -116, width: 5, height: 71)
+
+
+
+//draw mouth
+canvas.fillColor = Color.black
+canvas.drawEllipse(centreX: 0, centreY: -80, width: 50, height: 5)
+//draw axes with real lines
+canvas.drawLine(fromX: -600, fromY: 0, toX: 600, toY: 0)
+canvas.drawLine(fromX: 0, fromY: -600, toX: 0, toY: 600)
+
+//draw blood tears
+canvas.fillColor = Color.red
+for y in stride(from: 0, through: -200, by: -50) {
+    canvas.drawEllipse(centreX: 90, centreY: y, width: 20, height: 30)
+}
+
+
+canvas.drawShapesWithBorders = true
+canvas.drawShapesWithFill = false
+canvas.defaultBorderWidth = 15
+canvas.drawEllipse(centreX: 0, centreY: 0, width: 350, height: 350)
 
 
 /*:
